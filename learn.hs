@@ -68,3 +68,12 @@ isAsc []  = True
 isAsc [x] = True
 isAsc (x:y:xs) =
     (x <= y) && isAsc (y:xs)
+
+-- First arg is a func and second is a type
+app :: (a -> b) -> a -> b
+app f x = f x
+
+-- *Main> app add1 5
+-- 6
+add1 :: Int -> Int
+add1 x = x + 1
